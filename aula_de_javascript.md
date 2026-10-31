@@ -209,18 +209,58 @@ notbook
 
 # exemplo 012
 ```js
+let alunos = [
+    {nome: "ana", nota: 9},
+    {nome: "italo", nota: 7},
+    {nome: "rodrigo", nota: 9}
+];
 
+for(let aluno of alunos){
+    console.log(aluno.nome + ": " + aluno.nota);
+}
 ```
-
+*resultado*
 ````
+ana: 9
+italo: 7
+rodrigo: 9
 ````
 
 # exemplo 013
 ```js
+function calcularmedia(notas){
+    let soma = 0;
+    for(let nota of notas){
+        soma = soma +nota;
+    }
 
+    return soma / notas.length;
+}
+
+let notas = [];
+
+for (let i = 1; i <= 3; i++){
+    let nota = Number(prompt("digite a nota" + i));
+    notas.push(nota);
+}
+
+let media = calcularmedia(notas);
+
+console.log("notas: ", notas);
+console.log("media: ", media);
+
+if(media >= 6){
+    console.log("aluno aprovado. ");
+
+}else{
+    console.log("aluno reprovado.");
+}
 ```
-
+*resultado*
 ````
+notas:  [9, 5, 6]
+media:  6.666666666666667
+aluno aprovado. 
 ````
 
 # exemplo 014
